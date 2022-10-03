@@ -1,14 +1,13 @@
 let board = document.getElementById("board");
 
-let color_red = document.querySelector(".color.red");
-let color_blue = document.querySelector(".color.blue");
-let color_green= document.querySelector(".color.green");
-let color_yellow= document.querySelector(".color.yellow");
-let color_eraser= document.querySelector(".eraser");
-let newpage= document.querySelector(".newpage");
-let slider = document.getElementById("pensize");
-let downpdf = document.querySelector(".downpdf");
-
+const color_red = document.querySelector(".color.red");
+const color_blue = document.querySelector(".color.blue");
+const color_green= document.querySelector(".color.green");
+const color_yellow= document.querySelector(".color.yellow");
+const color_eraser= document.querySelector(".eraser");
+const newpage= document.querySelector(".newpage");
+const slider = document.getElementById("pensize");
+const downpdf = document.querySelector(".downpdf");
 
 newpage.addEventListener("click",function(){
     let canvas = document.createElement("canvas");
@@ -24,7 +23,6 @@ newpage.addEventListener("click",function(){
     anchor.href = link;
     pages.push(link);
     anchor.download= "file.png";
-console.log(pages);
     anchor.click();
     tool = replaceCanvas(board);
     tool.strokeStyle="black";
@@ -33,6 +31,7 @@ console.log(pages);
     board = document.getElementById("board");
    
 })
+
 function replaceCanvas(elem) {
     let newcanvas = document.createElement("canvas");
     newcanvas.setAttribute('id',"board");
