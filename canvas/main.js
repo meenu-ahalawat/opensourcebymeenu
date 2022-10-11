@@ -24,7 +24,6 @@ newpage.addEventListener("click",function(){
     anchor.href = link;
     pages.push(link);
     anchor.download= "file.png";
-console.log(pages);
     anchor.click();
     tool = replaceCanvas(board);
     tool.strokeStyle="black";
